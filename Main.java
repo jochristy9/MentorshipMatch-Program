@@ -1,19 +1,37 @@
 public class Main {
+
     public static void main(String[] args) {
 
-        Scanner scnr = new Scanner(System.in);
+        MentorshipProgram program = new MentorshipProgram();
 
-        int choice;
+        Mentor mentor1 = new Mentor("Sarah Johnson", "Computer Science", 10);
+        Mentor mentor2 = new Mentor("David Lee", "Engineering", 7);
 
-        do {
-            System.out.println("1. Create Mentor");
-            System.out.println("2. Create Mentee");
-            System.out.println("3. Exit");
+        Mentee mentee1 = new Mentee("Alex Smith", "Computer Science", "Software Engineer");
+        Mentee mentee2 = new Mentee("Maria Garcia", "Engineering", "Mechanical Engineer");
 
-            choice = scnr.nextInt();
+        program.addParticipant(mentor1);
+        program.addParticipant(mentor2);
+        program.addParticipant(mentee1);
+        program.addParticipant(mentee2);
 
-        } while(choice != 3);
+        System.out.println("=================================");
+        System.out.println("      Mentorship Match System");
+        System.out.println("=================================");
 
-        scnr.close();
+        System.out.println("\nRegistered Participants:");
+        program.displayParticipants();
+
+        System.out.println("\nMentor Information:");
+        System.out.println(mentor1.getName() + " - " + mentor1.getField() + " - " + mentor1.getYearsExperience() + " years experience");
+
+        System.out.println(mentor2.getName() + " - " + mentor2.getField() + " - " + mentor2.getYearsExperience() + " years experience");
+
+        System.out.println("\nMentee Information:");
+        System.out.println(mentee1.getName() + " - Goal: " + mentee1.getCareerGoal());
+
+        System.out.println(mentee2.getName() + " - Goal: " + mentee2.getCareerGoal());
+
+        System.out.println("\nThank you for using Mentorship Match!");
     }
 }
