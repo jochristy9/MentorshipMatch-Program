@@ -12,10 +12,6 @@ This program helps connect mentors and mentees while providing access to career 
 
 This program allows users to:
 
-* create Mentor profiles
-* create Mentee profiles
 * find mentor-mentee matches using a compatibility score
 * browse career development resources
 * view scholarship opportunities
-* join and manage mentorship programs
-* view registered participants
