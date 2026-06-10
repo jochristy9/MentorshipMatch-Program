@@ -24,13 +24,29 @@ public class Main {
 
         System.out.println("\nMentor Information:");
         System.out.println(mentor1.getName() + " - " + mentor1.getField() + " - " + mentor1.getYearsExperience() + " years experience");
-
-        System.out.println(mentor2.getName() + " - " + mentor2.getField() + " - " + mentor2.getYearsExperience() + " years experience");
-
         System.out.println("\nMentee Information:");
         System.out.println(mentee1.getName() + " - Goal: " + mentee1.getCareerGoal());
-
+        int score1 = MatchScoreCalculator.calculateMatchScore(mentor1, mentee1);
+        
+        System.out.println("\nMentor Information:");
+        System.out.println(mentor2.getName() + " - " + mentor2.getField() + " - " + mentor2.getYearsExperience() + " years experience");
+        System.out.println("\nMentee Information:");
         System.out.println(mentee2.getName() + " - Goal: " + mentee2.getCareerGoal());
+        int score2 = MatchCalculator.calculateMatchScore(mentor2, mentee2);
+    	System.out.println("\nMatch Score: " + score + "%");
+        
+        Resource resource1 = new Resource(
+                "Resume Builder Workshop",
+                "Learn how to create a professional resume.",
+                "www.futurecareershub.org");
+
+        Resource resource2 = new Resource(
+                "Women in STEM Scholarship",
+                "Financial assistance for students pursuing STEM degrees.",
+                "www.stemscholarsfund.org");
+
+        resource1.displayResource();
+        resource2.displayResource();
 
         System.out.println("\nThank you for using Mentorship Match!");
     }
