@@ -35,15 +35,9 @@ public class Main {
         int score2 = MatchCalculator.calculateMatchScore(mentor2, mentee2);
     	System.out.println("\nMatch Score: " + score + "%");
         
-        Resource resource1 = new Resource(
-                "Resume Builder Workshop",
-                "Learn how to create a professional resume.",
-                "www.futurecareershub.org");
+        Resource resource1 = new Resource("Resume Builder Workshop", "Learn how to create a professional resume.", "www.futurecareershub.org");
 
-        Resource resource2 = new Resource(
-                "Women in STEM Scholarship",
-                "Financial assistance for students pursuing STEM degrees.",
-                "www.stemscholarsfund.org");
+        Resource resource2 = new Resource("Women in STEM Scholarship","Financial assistance for students pursuing STEM degrees.","www.stemscholarsfund.org");
 
         resource1.displayResource();
         resource2.displayResource();
