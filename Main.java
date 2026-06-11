@@ -7,8 +7,22 @@ public class Main {
         Mentor mentor1 = new Mentor("Sarah Johnson", "Computer Science", 10);
         Mentor mentor2 = new Mentor("David Lee", "Engineering", 7);
 
-        Mentee mentee1 = new Mentee("Alex Smith", "Computer Science", "Software Engineer");
-        Mentee mentee2 = new Mentee("Maria Garcia", "Engineering", "Mechanical Engineer");
+        Scanner scnr = new Scanner(System.in);
+
+        System.out.print("Enter mentee name: ");
+        String name = scnr.nextLine();
+
+        System.out.print("Enter field of study: ");
+        String field = scnr.nextLine();
+
+        System.out.print("Enter career goal: ");
+        String careerGoal = scnr.nextLine();
+
+        Mentee mentee1 = new Mentee(name, field, careerGoal);
+
+        mentee1.displayRole();
+        System.out.println("Field: " + mentee1.getField());
+        System.out.println("Career Goal: " + mentee1.getCareerGoal());
 
         program.addParticipant(mentor1);
         program.addParticipant(mentor2);
@@ -31,8 +45,8 @@ public class Main {
         System.out.println("\nMentor Information:");
         System.out.println(mentor2.getName() + " - " + mentor2.getField() + " - " + mentor2.getYearsExperience() + " years experience");
         System.out.println("\nMentee Information:");
-        System.out.println(mentee2.getName() + " - Goal: " + mentee2.getCareerGoal());
-        int score2 = MatchCalculator.calculateMatchScore(mentor2, mentee2);
+        System.out.println(mentee2.getName() + " - Goal: " + mentee1.getCareerGoal());
+        int score2 = MatchCalculator.calculateMatchScore(mentor2, mentee1);
     	System.out.println("\nMatch Score: " + score + "%");
         
         Resource resource1 = new Resource("Resume Builder Workshop", "Learn how to create a professional resume.", "www.futurecareershub.org");
